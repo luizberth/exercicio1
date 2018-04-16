@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int multiplo, LS, LI, contador, soma = 0;
+    printf("Escolha o multiplo:");
+    scanf("%i", &multiplo);
+    printf("Escolha o limite inferior:");
+    scanf("%i", &LI);
+    printf("Escolha o limite superior:");
+    scanf("%i", &LS);
+    if (multiplo < 2 || LI > LS)
+        printf("ERRO!!!\n");
+    printf("numeros multiplos de %i compreendidos entre [%i, %i]:\n", multiplo, LI, LS);
+    for (contador = LI; contador <= LS; contador++)
+    {
+        if (contador % multiplo == 0)
+        {
+            printf("multiplo de %i eh: %i\n", multiplo,contador);
+            soma = soma + contador;
+        }
+    }
+    printf("soma dos multiplos de %i: %i\n", multiplo, soma);
+    return 0;
+}
