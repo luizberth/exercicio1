@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int contador, soma = 0;
+    printf("numero entre [10,90] que divididos por 5 tem resto 2:\n");
+    for (contador = 10; contador <= 90; contador++)
+    {
+        if (contador % 5 == 2)
+            printf("numero eh: %i\n", contador);
+        soma = soma + contador;
+    }
+    printf("soma dos numeros: %i\n", soma);
+    return 0;
+}
