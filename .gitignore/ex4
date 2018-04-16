@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int habitantes = 0, S = 0, N = 0;
+    char empregado;
+    float porcS, porcN;
+    do
+    {
+        printf("digite se o habitante esta empregado: S:Empregado ou N: Desempregado:\n");
+        scanf("\n%c",&empregado);
+        if (empregado == 'S' || empregado == 's')
+        {
+            habitantes++;
+            S = S + 1;
+            porcS = 100.0 * S / (S + N);
+            porcN = 100.0 * N / (S + N);
+        }
+        else if (empregado == 'N' || empregado == 'n')
+        {
+            habitantes++;
+            N = N + 1;
+            porcS = 100.0 * S / (S + N);
+            porcN = 100.0 * N / (S + N);
+        }
+        else
+            printf("LETRA ERRADA! TENTE NOVAMENTE.\n");
+        printf("Porcentagem de empregados: %.1f\n",porcS);
+        printf("Porcentagem de desempregados: %.1f\n",porcN);
+    }while (habitantes <= 10000);
+    return 0;
+}
