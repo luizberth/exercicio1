@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int contador, soma = 0;
+    printf("numeros multiplos de 11 entre [300,400]:\n");
+    for(contador = 400; contador >= 300; contador--)
+    {
+        if (contador % 11 == 0)
+        {
+            printf("numero eh: %i\n", contador);
+            soma = soma + contador;
+        }
+    }
+    printf("soma dos numeros eh:%i\n", soma);
+    return 0;
+}
