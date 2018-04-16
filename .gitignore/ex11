@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int numero, contador;
+    printf("escolha um numero inteiro: ");
+    scanf("%i", &numero);
+    for (contador = numero; contador <= numero + 20; contador++)
+    printf("numero eh: %i\n", contador);
+    return 0;
+}
