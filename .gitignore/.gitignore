@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int contador;
+    printf("multiplos de 3 entre [3,100]:\n");
+    for (contador = 3; contador <= 100; contador++)
+    {
+        if (contador % 3 == 0)
+            printf("numero eh:%i\n", contador);
+    }
+    return 0;
+}
