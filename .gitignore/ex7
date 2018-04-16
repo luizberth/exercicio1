@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int contador, soma = 0;
+    printf("multiplos de 3, nao multiplos de 5 e numeros impares compreendidos entre [9,90]:\n");
+    for (contador = 9; contador <= 90; contador++)
+    {
+        if (contador % 3 == 0 && contador % 2 != 0 && contador % 5 != 0)
+            printf("numero eh: %i\n", contador);
+        soma = soma + contador;
+    }
+    printf("soma dos numeros: %i\n",soma);
+    return 0;
+}
