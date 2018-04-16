@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define SM 880.05
+int main()
+{
+    int cliente = 0, A = 0, B = 0, C = 0;
+    float salario, porcA, porcB, porcC;
+    while (cliente < 10)
+    {
+        printf("digite o salario dos funcionarios em reais:");
+        scanf("%f",&salario);
+        if (salario < SM)
+            printf("ERRO. TENTE NOVAMENTE.\n");
+        else
+       {
+           salario = salario / SM;
+           if (salario < 5)
+            C++;
+           else if (salario <= 15)
+            B++;
+           else
+            A++;
+           cliente++;
+            porcA = 100.0 * A / cliente;
+            porcB = 100.0 * B / cliente;
+            porcC = 100.0 * C / cliente;
+            printf("porcentagem de clientes A: %.1f\n",porcA);
+            printf("porcentagem de clientes B: %.1f\n",porcB);
+            printf("porcentagem de clientes C: %.1f\n",porcC);
+
+       }
+    }
+    return 0;
+}
