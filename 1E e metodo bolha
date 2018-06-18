@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TAMANHO 10
+
+int main()
+{
+    int Vetor[TAMANHO], indice;
+    int Ls, auxiliar,trocou;
+    for(indice = 0; indice < TAMANHO; indice++)
+    {
+        Vetor[indice] = rand() % (20) + 1;
+        if (Vetor[indice] % 3 == 0 || Vetor[indice] % 5 == 0)
+            printf(" %i ", Vetor[indice]);
+    }
+    Ls = TAMANHO - 1;
+    do{
+        trocou = 0;
+        for(indice = 0; indice < Ls; indice++)
+        {
+            if(Vetor[indice] > Vetor[indice + 1])
+            {
+                auxiliar = Vetor[indice];
+                Vetor[indice] = Vetor[indice + 1];
+                Vetor[indice + 1] = auxiliar;
+                trocou = 1;
+            }
+        }
+        Ls = Ls - 1;
+    }while(trocou);
+
+    printf("\nVetor: [ ");
+    for(indice = 0; indice < TAMANHO; indice++)
+        printf(" %i ", Vetor[indice]);
+    printf(" ]\n\n");
+    return 0;
+}
