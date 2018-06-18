@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TAMANHO 10
+
+int main()
+{
+    int Vetor[TAMANHO] = {10, 40, 50, 21, 22, 30, 51, 42, 70, 54};
+    int indice, soma = 0, contador = 0;
+    int media,procurado, saida = -1;
+    for(indice = 0; indice < TAMANHO; indice++)
+    {
+        printf(" %i ", Vetor[indice]);
+        if(Vetor[indice] % 5 == 0 && Vetor[indice] % 2 == 0)
+        {
+            soma= soma + Vetor[indice];
+            contador++;
+            media = soma / contador;
+        }
+    }
+    printf("\n Soma dos Numeros: %i\n", soma);
+    printf("Media dos numeros: %i\n", media);
+
+    indice = 0;
+    printf("Digite o valor procurado: ");
+    scanf("%i", &procurado);
+    while(indice < TAMANHO && saida == -1)
+    {
+        if(Vetor[indice] == procurado)
+            saida = indice;
+        else
+            indice++;
+    }
+    if(saida == -1)
+        printf("O valor procurado: %i nao foi encontrado.\n\n", procurado);
+    else
+        printf("O valor procurado; %i encontrado no indice: %i.\n\n",Vetor[saida], saida);
+    return 0;
+}
